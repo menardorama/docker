@@ -10,5 +10,5 @@ jobs:
       - cd nginx
       - docker build -t docker-sonerezh .
       - docker images
-      - docker tag docker-koel $DOCKER_USERNAME/docker-sonerezh
+      - docker tag docker-sonerezh $DOCKER_USERNAME/docker-sonerezh
       - docker push $DOCKER_USERNAME/docker-sonerezh
