@@ -12,6 +12,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	php-mysql \
 	supervisor
 
+# Create missing php-fpm run dir
+RUN mkdir /run/php/
 # Install Sonerezh
 RUN git clone --branch 1.1.3 --depth 1 https://github.com/Sonerezh/sonerezh.git /usr/share/nginx/sonerezh && \
 	chown -R www-data: /usr/share/nginx/sonerezh && \
